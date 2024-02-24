@@ -163,7 +163,6 @@ def RejList():
         html.ul(*checklist),
     )
 
-
 todo_list = Starlette()
 configure(todo_list, RejList)
 
@@ -193,9 +192,10 @@ if __name__ == "__main__":
     Path("last_workout.jsonl").unlink(missing_ok=True)
     lines_seen = set()
     outfile = open("last_workout.jsonl", "w+")
-    for line in open("workout_log.jsonl", "r"):
-        if line not in lines_seen:  # not a duplicate
-            outfile.write(line)
-            lines_seen.add(line)
+    if Path("workout_log.jsonl").exists():
+        for line in open("workout_log.jsonl", "r"):
+            if line not in lines_seen:  # not a duplicate
+                outfile.write(line)
+                lines_seen.add(line)
     outfile.close()
-    Path("workout_log.jsonl").unlink()
+    Path("workout_log.jsonl").unlink(missing_ok=True)
