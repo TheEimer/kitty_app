@@ -191,7 +191,7 @@ if __name__ == "__main__":
     # move workout_log.jsonl to last_workout.jsonl
     Path("last_workout.jsonl").unlink(missing_ok=True)
     lines_seen = set()
-    outfile = open("last_workout.jsonl", "w")
+    outfile = open("last_workout.jsonl", "w+")
     for line in open("workout_log.jsonl", "r"):
         if line not in lines_seen:  # not a duplicate
             outfile.write(line)
