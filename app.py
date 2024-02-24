@@ -52,11 +52,8 @@ from reactpy.backend.fastapi import configure
 
 app = FastAPI()
 
-
 @component
 def HelloWorld():
     return html.h1("Hello, world!")
-
-
 
 configure(app, HelloWorld)
