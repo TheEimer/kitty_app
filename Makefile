@@ -7,3 +7,9 @@ format:
 check:
 	ruff check --fix .
 	ruff check --fix src
+
+build-docker:
+	docker build -t kitty-list .
+
+run-docker:
+	docker run -p 8080:8080 kitty-list

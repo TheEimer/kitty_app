@@ -10,7 +10,6 @@ from starlette.applications import Starlette
 
 from src.list_utils import CountItem, DailyItem, IrregularItem
 
-
 if Path("last_workout.jsonl").exists():
     baseline_data_list = []
     with open("last_workout.jsonl", "r") as f:
@@ -163,6 +162,7 @@ def RejList():
         html.ul(*checklist),
     )
 
+
 todo_list = Starlette()
 configure(todo_list, RejList)
 
@@ -173,7 +173,7 @@ if __name__ == "__main__":
         host="0.0.0.0",
         port=int(os.getenv("PORT", 8080)),
         log_level=os.getenv("LOG_LEVEL", "info"),
-        #proxy_headers=True,
+        # proxy_headers=True,
     )
     # move contents of last_workout.jsonl to workout_log.jsonl with dividers
     if Path("last_workout.jsonl").exists():
