@@ -7,9 +7,9 @@ build:
 
   env: # define environment variables
     - name: PORT
-      value: '8080'
+      value: '8000'
 
 run:
   command: python todo_list.py # command to run app
   network:
-    port: 8080 # port AppRunner will expose
+    port: 8000 # port AppRunner will expose
