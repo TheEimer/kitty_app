@@ -49,6 +49,7 @@
 from fastapi import FastAPI
 from reactpy import component, html
 from reactpy.backend.fastapi import configure
+import uvicorn
 
 app = FastAPI()
 
@@ -57,3 +58,13 @@ def HelloWorld():
     return html.h1("Hello, world!")
 
 configure(app, HelloWorld)
+
+if __name__ == "__main__":
+    print("Starting webserver...")
+    uvicorn.run(
+        app,
+        host="0.0.0.0",
+        port=8000,
+        #log_level=os.getenv("LOG_LEVEL", "info"),
+        # proxy_headers=True,
+    )
