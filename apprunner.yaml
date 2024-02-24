@@ -5,12 +5,7 @@ build:
     build:
       - pip install -r requirements.txt # install dependencies
 
-  env: # define environment variables
-    - name: PORT
-      value: '8000'
-
 run:
-  command: python todo_list.py # command to run app
+  command: python app.py # command to run app
   network:
-    port: 8000 # port AppRunner will expose
-    env: 8000
+    port: 8080 # port AppRunner will expose

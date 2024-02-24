@@ -1,4 +1,4 @@
-FROM python:3.8.1-slim 
+FROM --platform=linux/x86-64 python:3.8.1-slim 
 
 ENV *PYTHONUNBUFFERED *1 
 EXPOSE 8000 
