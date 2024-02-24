@@ -6,6 +6,6 @@ build:
       - pip install -r requirements.txt # install dependencies
 
 run:
-  command: export REACTPY_DEBUG_MODE=1 && python todo_list.py # command to run app
+  command: python todo_list.py # command to run app
   network:
     port: 8000 # port AppRunner will expose
