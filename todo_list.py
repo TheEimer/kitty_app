@@ -5,7 +5,7 @@ from pathlib import Path
 
 import uvicorn
 from reactpy import component, hooks, html
-from reactpy.backend.starlette import configure
+from reactpy.backend.starlette import configure, Options
 from starlette.applications import Starlette
 
 from src.list_utils import CountItem, DailyItem, IrregularItem
