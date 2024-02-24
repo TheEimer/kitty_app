@@ -10,6 +10,7 @@ from starlette.applications import Starlette
 
 from src.list_utils import CountItem, DailyItem, IrregularItem
 
+
 if Path("last_workout.jsonl").exists():
     baseline_data_list = []
     with open("last_workout.jsonl", "r") as f:
