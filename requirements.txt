@@ -1,5 +1,4 @@
 uvicorn[standard]
-reactpy[starlette,fastapi]
+reactpy[fastapi]
 urllib3==1.26.7
-fastapi
 prometheus_client
