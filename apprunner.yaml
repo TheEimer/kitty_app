@@ -13,3 +13,4 @@ run:
   command: python todo_list.py # command to run app
   network:
     port: 8000 # port AppRunner will expose
+    env: 8000
