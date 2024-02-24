@@ -1,5 +1,5 @@
 uvicorn[standard]
-reactpy[starlette]
+reactpy[starlette,fastapi]
 urllib3==1.26.7
 fastapi
 prometheus_client
